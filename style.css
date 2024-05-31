@@ -1,0 +1,322 @@
+body {
+  padding: 20px 50px;
+  text-align: center;
+  color: #000;
+  box-sizing:border-box;
+  background: #f7f1ea;
+}
+
+::-webkit-scrollbar{
+width: 5px;
+height: 5px;
+}
+::-webkit-scrollbar-thumb{
+background: #D1D1D1;
+border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+background: #C7C7C7;
+}
+::-webkit-scrollbar-track{
+background: #FFFFFF;
+border-radius: 0px;
+box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
+
+.wrapper {
+  height:calc(100vh - 78px); overflow:auto; position:relative;
+  box-sizing:border-box;
+}
+
+.nav {
+  position:fixed;
+  width:60px;
+  left:0;
+  bottom:20px;
+  display: flex;
+  align-items:center; justify-content:center;
+  writing-mode: vertical-rl;
+  font: 700 0.6em crimson text;
+  letter-spacing: 2px;
+  text-transform:uppercase;
+text-orientation: mixed;
+  -moz-transform: rotate(-180deg);
+-webkit-transform: rotate(-180deg);
+-o-transform: rotate(-180deg);
+-ms-transform: rotate(-180deg);
+transform: rotate(-180deg);
+}
+
+.userlinks {
+  position:fixed;
+    width:60px;
+  right:0;
+  top:20px;
+  display: flex; flex-flow:column nowrap;
+  align-items:center; justify-content:center;
+  font-size:1.3em;
+}
+
+.userlinks > i, .userlinks > div {
+  margin: 5px 0; 
+  color: #603b32
+}
+
+.userlinks img {
+  width:25px; height:25px;
+  object-fit:cover;
+  border-radius: 50px;
+}
+
+img.menuavatar {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius: 5px;
+}
+
+.forumtitle {
+  font: 700 2em crimson text;
+ position:relative;
+}
+.forumtitle:after {
+  position:absolute;
+background: url(https://i.imgur.com/0ie5t7k.png);
+background-repeat: no-repeat;
+  background-color: #000;
+padding: 8px 0;
+  width:50px;
+}
+
+.logo {
+  box-sizing:border-box;
+  background: url(https://i.ibb.co/5s0GLTP/2.png) center no-repeat;
+  background-size:cover;
+  width:100%;
+  margin:auto;
+  height:calc(100vh - 70px);
+  display:flex;
+  flex-flow:column nowrap;
+  align-items:center;
+  justify-content:center;
+  text-align:right;
+  border-bottom: double 3px #603b32;
+}
+
+.logo .title {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto;
+}
+
+.logo .chinese {
+  font: 700 10em noto serif sc;
+  writing-mode: vertical-rl;
+text-orientation: upright;
+}
+
+.logo .english {
+  font: 500 1em zen kaku gothic antique;
+  line-height:80%;
+  text-align:justify;
+  writing-mode: vertical-rl;
+text-orientation: mixed;
+  margin-right:-30px;
+  max-height:300px;
+}
+
+.logo .subtitle {
+  font: 700 1em zen kaku gothic antique;
+  line-height:80%;
+  text-align:justify;
+  margin-top:20px;
+  max-width:40%;
+}
+
+.innerwrapper {
+  position:relative;
+  z-index:2;
+  padding:50px 0;
+}
+
+.userlinks .ph-caret-up, .userlinks .ph-caret-down {  position:fixed; }
+
+.userlinks .ph-caret-up { bottom:40px; }
+.userlinks .ph-caret-down { bottom:20px; }
+/******** TRIPLE *********/
+.triple-deco-container {
+  display: grid;
+  width:100%;
+  height:calc(100% - 500px);
+  box-sizing:border-box;
+  grid-template-columns: 
+    [wide-start]  5px 
+    [mid-start]   5px 
+    [tall-start]  1fr 
+    [tall-end]    5px 
+    [mid-end]     5px 
+    [wide-end] 
+  ;
+  grid-template-rows: 
+    [tall-start]  5px 
+    [mid-start]   5px 
+    [wide-start]  1fr 
+    [wide-end]    5px 
+    [mid-end]     5px 
+    [tall-end] 
+  ;
+}
+
+.triple-deco-container .triple-deco-content {
+  grid-column: tall-start / tall-end;
+  grid-row: wide-start / wide-end;
+  padding:1px;
+  background: url(https://files.jcink.net/uploads/sagecodes/jianghu/jianghu_bg.png) center no-repeat;
+  background-size:cover;
+}
+
+.triple-deco-container .triple-deco-tall {
+  grid-area: tall;
+  border: 1px solid #603b32;
+}
+
+.triple-deco-container .triple-deco-mid {
+  grid-area: mid;
+  border: 1px solid #603b32;
+}
+
+.triple-deco-container .triple-deco-wide {
+  grid-area: wide;
+  border: 1px solid #603b32;
+}
+
+/*******************************************************************************
+UPPER MENU TOGGLE BY MISSY @ MISSYCODES.TUMBLR.COM & CAUTION (ADD THIS TO STYLESHEET)
+*******************************************************************************/
+#m-toggle {
+ position: fixed;
+ top: 20px;
+ right: 18px;
+ z-index: 4;
+  cursor:pointer;
+}
+
+#m-toggle span {
+ font-size: 18px;
+ background: #aed5eb;
+ width: 30px;
+ height: 25px;
+text-align: center;
+ border-radius: 100%;
+ color: #000;
+}
+
+
+#missy-menu {
+ width: calc(100% - 140px);
+ min-width: 750px;
+ max-width: 1400px;
+ transition-duration: 0.4s;
+   top: -100%;
+  left: 69px;
+  height: calc(100% - 78px);
+   position: fixed;
+ background: #f7f1ea url(https://files.jcink.net/uploads/sagecodes/jianghu/chinese_patt_good1.jpg) repeat;
+  background-size:500px;
+  box-sizing:border-box;
+  z-index:5;
+  display:flex;
+  padding:20px;
+}
+
+#missy-menu.active { top: 34px !important; }
+
+/* avatar border */
+/********** STAIRSTEP ***********/
+.stair-deco-container {
+  display: grid;
+  width:25%;
+  grid-template-columns: 
+    [outer-start]  5px 
+    [mid-start]    5px 
+    [inner-start]  1fr 
+    [inner-end]    5px 
+    [mid-end]      5px 
+    [outer-end] 
+  ;
+  grid-template-rows: 
+    [inner-start]  5px 
+    [mid-start]    5px 
+    [outer-start]  1fr 
+    [outer-end]    5px 
+    [mid-end]      5px 
+    [inner-end] 
+  ;
+}
+
+.stair-deco-container .stair-deco-content {
+  grid-column: inner-start / inner-end;
+  grid-row: outer-start / outer-end;
+  padding: 5px;
+}
+
+.stair-deco-container .stair-deco-outer-left {
+  grid-column: outer-start / mid-start;
+  grid-row: outer-start / outer-end;
+  border-left: 1px solid #603b32;
+  border-top: 1px solid #603b32;
+  border-bottom: 1px solid #603b32;
+}
+
+.stair-deco-container .stair-deco-outer-right {
+  grid-column: mid-end / outer-end;
+  grid-row: outer-start / outer-end;
+  border-right: 1px solid #603b32;
+  border-top: 1px solid #603b32;
+  border-bottom: 1px solid #603b32;
+}
+
+.stair-deco-container .stair-deco-mid-left {
+  grid-column: mid-start / inner-start;
+  grid-row: mid-start / mid-end;
+  border-top: 1px solid #603b32;
+  border-bottom: 1px solid #603b32;
+}
+
+.stair-deco-container .stair-deco-mid-right {
+  grid-column: inner-end / mid-end;
+  grid-row: mid-start / mid-end;
+  border-top: 1px solid #603b32;
+  border-bottom: 1px solid #603b32;
+}
+
+.stair-deco-container .stair-deco-mid-top {
+  grid-column: mid-start / mid-end;
+  grid-row: outer-start / mid-start;
+  border-left: 1px solid #603b32;
+  border-right: 1px solid #603b32;
+}
+
+.stair-deco-container .stair-deco-mid-bottom {
+  grid-column: mid-start / mid-end;
+  grid-row: mid-end / outer-end;
+  border-left: 1px solid #603b32;
+  border-right: 1px solid #603b32;
+}
+
+.stair-deco-container .stair-deco-inner-top {
+  grid-column: inner-start / inner-end;
+  grid-row: inner-start / mid-start;
+  border-left: 1px solid #603b32;
+  border-right: 1px solid #603b32;
+  border-top: 1px solid #603b32;
+}
+
+.stair-deco-container .stair-deco-inner-bottom {
+  grid-column: inner-start / inner-end;
+  grid-row: mid-end / inner-end;
+  border-left: 1px solid #603b32;
+  border-right: 1px solid #603b32;
+  border-bottom: 1px solid #603b32;
+}
